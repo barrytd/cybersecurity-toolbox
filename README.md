@@ -4,7 +4,7 @@ A collection of Python and Bash security tools I'm building while learning offen
 
 This repo is a **learning portfolio** — the code is meant to demonstrate fundamentals (sockets, hashing, file I/O, parsing, networking) rather than replace production tools like Nmap, Hashcat, or AIDE.
 
-**Author:** [YOUR NAME]
+**Author:** Robert
 
 > **Status:** Active work-in-progress. Only **Project 01 (Port Scanner)** is currently in progress — the rest are placeholders for upcoming projects and will be filled in as I work through them. The structure is laid out in advance so the roadmap is visible.
 
