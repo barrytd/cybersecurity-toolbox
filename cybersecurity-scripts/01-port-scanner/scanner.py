@@ -4,16 +4,29 @@ Try to connect to a single port on a target host and report open/closed.
 """
 
 import socket
-target = "scanme.nmap.org"
-port = 80
+import argparse
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.settimeout(3)
+parser = argparse.ArgumentParser(description="Simple TCP port scanner")
+parser.add_argument("--target", default="scanme.nmap.org")
+parser.add_argument("--start", type=int, default=20)
+parser.add_argument("--end", type=int, default=25)
+args = parser.parse_args()
 
-result = s.connect_ex((target, port))
-if result == 0:
-    print (f"Port {port} is OPEN")
-else:
-    print (f"Port {port} is CLOSED")
+for port in range(args.start, args.end + 1):
 
-s.close()
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(1)  # Set a timeout for the connection attempt
+
+    result = s.connect_ex((args.target, port))
+    if result == 0:
+        print (f"Port {port} is OPEN")
+        try:
+            banner = s.recv(1024).decode().strip()
+            if banner:
+                print(f" Banner: {banner}")
+        except:
+            pass
+    else:
+        print (f"Port {port} is CLOSED")
+
+    s.close()
