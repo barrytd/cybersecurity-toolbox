@@ -6,7 +6,7 @@ This repo is a **learning portfolio** — the code is meant to demonstrate funda
 
 **Author:** Robert P.
 
-> **Status:** Active work-in-progress. Only **Project 01 (Port Scanner)** is currently in progress — the rest are placeholders for upcoming projects and will be filled in as I work through them. The structure is laid out in advance so the roadmap is visible.
+> **Status:** Active work-in-progress. **Project 01 (Port Scanner)** and **Project 02 (Hash Cracker)** are complete; the rest are placeholders for upcoming projects and will be filled in as I work through them. The structure is laid out in advance so the roadmap is visible.
 
 ---
 
